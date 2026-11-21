@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/indexresponsive.css">
+    
+
+    <title>ByteShop | Início</title>
+</head>
+<body>
+    <header class="Header-container">
+        <div id="header-div">
+            <a id="index-a" href="index.html">
+                <span id="header-span">ByteShop</span>
+            </a>
+        </div>
+        <form class="Search-container" method="get">
+            <input id="search-inp" type="search" name="query" placeholder="Pesquisar...">
+            <button id="search-btn" type="submit">
+                <img src="images/icons/search (1).svg" alt="botao-de-pesquisa">
+            </button>
+        </form>
+        <div class="Menu-container">
+            <a href="cart.html" id="cart-btn">
+                <img id="menu-img-cart" src="images/icons/cart.svg" title="Cart" alt="imagem-usuario">
+            </a>
+            <a href="login.html" id="login-btn">
+                <img id="menu-img-user" src="images/icons/user.svg" title="Login" alt="imagem-shopping-cart">
+            </a>
+        </div>
+    </header>
+    
+    <main id="main" class="Main-container">
+        <h1>Conheça Nossos Produtos</h1>
+        <div id="container-products" class="Container-products"></div>
+    </main>
+    
+    <footer class="Footer">
+        <h4>developed by gabby &copy;</h4>
+    </footer>
+    
+   
+    <script type="module" src="./scripts/index.js"></script>
+    
+    
+    
+</body>
+</html>

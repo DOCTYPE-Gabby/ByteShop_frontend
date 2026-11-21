@@ -1,0 +1,23 @@
+.Product-img-search {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+#container-products {
+    padding: 10px;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, #6ECFF6, #3A8DFF, #9B59B6);
+}
+
+.Main-container-search {
+  background: linear-gradient(to bottom, #6ECFF6, #3A8DFF, #9B59B6);
+  min-height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

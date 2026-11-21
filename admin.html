@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteShop | Admin</title>
+    <link rel="stylesheet" href="./styles/admin.css">
+    
+</head>
+<body>
+       
+    <main class="adminContainer">
+             <h1>Adicionar Novo Produto</h1>
+        <form action="submit" method="post">
+            <input type="text" placeholder="Nome do produto" name="inpNomeProduto" required>
+            <input type="text" placeholder="Preço" name="inpPreco" required>
+            <input type="text" placeholder="Descrição curta" name="inpDesCurta" required>
+            <input type="text" placeholder="Descrição longa" name="inpDesLonga" required>
+            <input type="file" placeholder="Imagem do produto" name="image" id="inpFile" required>
+
+            <button id="btnUpload" type="button">Escolher arquivo</button>
+            <div class="imgPreview"><img src="" alt="" id="img">
+                <button id="xIcon"><img src="./images/icons/closeRed.svg" alt="close icon"></button>
+            <p id="imgPmsg"></p></div>
+            <button type="submit" id="formBtn">Cadastrar Produto</button>
+        </form>
+    </main>
+    <script type="module" src="./scripts/admin/adminFormFront.js"></script>
+    
+    
+       <footer class="Footer">
+        <h4>developed by gabby &copy;</h4>
+    </footer>
+</body>
+</html>

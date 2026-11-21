@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteShop | Login</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/login.css">
+    
+</head>
+<body>
+  <header class="Header-container">
+        <div id="header-div">
+            <a id="index-a" href="index.html">
+                <span id="header-span">ByteShop</span>
+            </a>
+        </div>
+      
+    </header>
+
+    <main id="main-login" class="Main-container-login">
+        <form id="login-form" class="Form-container">
+            <fieldset class="Form">
+                <input id="user-email" type="email" placeholder="Digite Seu Email..." required>
+                <input id="user-password" type="password" placeholder="Digite Sua Senha..." required>
+                <p id="error-p"></p>
+                <p class="account">Não tem uma conta? <a href="new-account.html">Cadastre-se em nosso site</a></p>
+                <button id="login-btn" type="button">Login</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="Footer">
+        <h4>developed by gabby &copy;</h4>
+    </footer>
+
+    <script type="module" src="./scripts/login.js"></script>
+</body>
+</html>

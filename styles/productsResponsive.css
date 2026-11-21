@@ -1,0 +1,17 @@
+
+@media screen and (min-width: 315px) and (max-width: 424px) {
+.Long-description {
+  margin-top: 8px;
+
+  
+}
+
+#search-inp {
+   margin-left: 5px;
+}
+
+.Menu-container {
+   display: flex;
+   flex-direction: row;
+}
+}
