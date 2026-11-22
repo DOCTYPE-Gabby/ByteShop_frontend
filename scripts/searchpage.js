@@ -1,51 +1,48 @@
 import { postCart } from "./modules/postCart.js";
 
 window.addEventListener("DOMContentLoaded", () => {
+  function pegarUrl() {
+    const dadosURL = new URLSearchParams(window.location.search);
+    const pesquisa = dadosURL.get("search");
 
-    function pegarUrl() {
-        const dadosURL = new URLSearchParams(window.location.search);
-        const pesquisa = dadosURL.get("search");
-        
-
-        if (pesquisa) {
-            return pesquisa;
-        } else {
-            return null;
-        }
+    if (pesquisa) {
+      return pesquisa;
+    } else {
+      return null;
     }
+  }
 
-    async function getData() {
-        const search = pegarUrl();
+  async function getData() {
+    const search = pegarUrl();
 
-        if (search) {
-            const valorlimpo = search.trim();
+    if (search) {
+      const valorlimpo = search.trim();
 
-            try {
-                const dados = await fetch(
-                    `/search?search=${encodeURIComponent(valorlimpo)}`
-                );
-                const res = await dados.json();
-                return res;
-
-            } catch (err) {
-                console.log(err);
-                return null;
-            }
-        }
+      try {
+        const dados = await fetch(
+          `/search?search=${encodeURIComponent(valorlimpo)}`,
+        );
+        const res = await dados.json();
+        return res;
+      } catch (err) {
+        console.log(err);
+        return null;
+      }
     }
+  }
 
-    async function renderData() {
-        const divProduto = document.getElementById("container-products");
-        const pesquisa = pegarUrl();
-        const dados = await getData();
+  async function renderData() {
+    const divProduto = document.getElementById("container-products");
+    const pesquisa = pegarUrl();
+    const dados = await getData();
 
-        const searchResult = document.getElementById("searchResult");
-        searchResult.innerText = `Resultado da pesquisa por: ${pesquisa}`;
+    const searchResult = document.getElementById("searchResult");
+    searchResult.innerText = `Resultado da pesquisa por: ${pesquisa}`;
 
-        if (!dados) return;
+    if (!dados) return;
 
-        dados.forEach(product => {
-            divProduto.innerHTML = `
+    dados.forEach((product) => {
+      divProduto.innerHTML = `
                 <img class="Product-img-search" src="${product.img}" alt="${product.product_name}">
                 
                 <div class="Products-produto-div" id="produto-div">
@@ -62,12 +59,12 @@ window.addEventListener("DOMContentLoaded", () => {
                 </div>
             `;
 
-            const cartBtn = document.getElementById("addCart");
-            cartBtn.addEventListener("click", () => {
-                postCart(product);
-            });
-        });
-    }
+      const cartBtn = document.getElementById("addCart");
+      cartBtn.addEventListener("click", () => {
+        postCart(product);
+      });
+    });
+  }
 
-    renderData();
+  renderData();
 });

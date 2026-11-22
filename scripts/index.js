@@ -1,10 +1,10 @@
 import { postCart } from "./modules/postCart.js";
 import { isAdminIsLogged } from "./modules/isAdmin.js";
 
-const elementoPai = document.getElementById('container-products');
-const base_URL = "http://localhost:3000/api/products";
-const paragrafo = document.createElement('p');
-const lista = document.createElement('ul');
+const elementoPai = document.getElementById("container-products");
+const base_URL = "/api/products";
+const paragrafo = document.createElement("p");
+const lista = document.createElement("ul");
 let produtosArr = [];
 
 isAdminIsLogged();
@@ -16,19 +16,16 @@ async function pegarDados() {
     produtosArr = data;
 
     criarCard();
-
   } catch (err) {
-    
     paragrafo.innerHTML = "Erro ao buscar dados";
     elementoPai.appendChild(paragrafo);
-    
   }
 }
 
 function criarCard() {
   let listHTML = "<ul>";
 
-  produtosArr.forEach(product => {
+  produtosArr.forEach((product) => {
     listHTML += `
       <li class="Card-produto">
         <a href="/products.html?id=${product.id}" target="_blank">
@@ -55,11 +52,11 @@ function criarCard() {
 
   const cartBtns = document.querySelectorAll(".cartBtn");
 
-  cartBtns.forEach(btn => {
+  cartBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       const productId = btn.getAttribute("data-id");
       const productName = btn.getAttribute("data-name");
-      const item = produtosArr.find(p => p.id === Number(productId));
+      const item = produtosArr.find((p) => p.id === Number(productId));
 
       postCart(item);
     });

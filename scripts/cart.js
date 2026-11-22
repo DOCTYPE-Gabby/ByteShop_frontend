@@ -33,7 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     if (userData) {
 
-        const cartUrl = `http://localhost:3000/api/cart/${userId}`;
+        const cartUrl = `/api/cart/${userId}`;
         console.log(userData, userId);
 
         async function getCart() {
