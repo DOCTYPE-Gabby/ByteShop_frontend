@@ -29,11 +29,12 @@ window.addEventListener("DOMContentLoaded", () => {
             mainContainer.appendChild(divCartItem);
 
         });
-    }
+    }  
+  
 
     if (userData) {
 
-        const cartUrl = `/api/cart/${userId}`;
+        const cartUrl = `https://byteshop-backend-kgup.onrender.com/api/cart/${userId}`;
         console.log(userData, userId);
 
         async function getCart() {
@@ -77,7 +78,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     async function deleteCart(userId, product) {
         try {
-            const deleteURL = `/cart/delete`;
+            const deleteURL = `https://byteshop-backend-kgup.onrender.com/api/cart/delete`;
             await fetch(deleteURL, {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json" },

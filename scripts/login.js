@@ -3,7 +3,7 @@ import { clearAllInputs } from "./modules/clearAll.js";
 const isUser = JSON.parse(window.localStorage.getItem("User"));
 const inputs = Array.from(document.querySelectorAll("input"));
 const formBtn = document.getElementById("login-btn");
-const userURL = "/api/login";
+const userURL = "https://byteshop-backend-kgup.onrender.com/api/login";
 const errorMsg = document.getElementById("error-p");
 
 inputs.forEach((inp) => {

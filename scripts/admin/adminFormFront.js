@@ -128,7 +128,7 @@ async function sendData() {
     }
   });
 
-  const fetchURL = `/api/admin`;
+  const fetchURL = `https://byteshop-backend-kgup.onrender.com/api/admin`;
   const dados = await fetch(fetchURL, {
     method: "POST",
     body: formData,

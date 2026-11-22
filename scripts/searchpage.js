@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
       try {
         const dados = await fetch(
-          `/search?search=${encodeURIComponent(valorlimpo)}`,
+          `https://byteshop-backend-kgup.onrender.com/api/search?search=${encodeURIComponent(valorlimpo)}`,
         );
         const res = await dados.json();
         return res;

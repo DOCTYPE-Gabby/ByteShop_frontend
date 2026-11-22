@@ -155,7 +155,7 @@ password2ndInp.addEventListener("input", () => {
 });
 
 async function postData() {
-  const link = `/api/create-account`;
+  const link = `https://byteshop-backend-kgup.onrender.com/api/create-account`;
   const name = document.getElementById("name");
 
   const dataBody = {

@@ -2,7 +2,7 @@ import { postCart } from "./modules/postCart.js";
 import { isAdminIsLogged } from "./modules/isAdmin.js";
 
 const elementoPai = document.getElementById("container-products");
-const base_URL = "/api/products";
+const base_URL = "https://byteshop-backend-kgup.onrender.com/api/products";
 const paragrafo = document.createElement("p");
 const lista = document.createElement("ul");
 let produtosArr = [];
