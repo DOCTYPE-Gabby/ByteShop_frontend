@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const dados = await getData();
 
     const searchResult = document.getElementById("searchResult");
-    searchResult.innerText = `Resultado da pesquisa por: ${pesquisa}`;
+    searchResult.innerText = `Resultado da pesquisa por: ${pesquisa ?? ""}`;
 
     if (!dados) return;
 
