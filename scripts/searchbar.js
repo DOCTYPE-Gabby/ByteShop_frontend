@@ -1,8 +1,13 @@
-const form = document.querySelector(".Search-container");
+console.log("searchbar carregou");
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault(); 
-    const value = document.getElementById("search-inp").value;
-    if (!value) return;
-    window.location.href = `search.html?search=${encodeURIComponent(value)}`;
-});
+const form = document.querySelector(".Search-container");
+const input = document.getElementById("search-inp");
+
+if (form && input) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const termo = input.value.trim();
+    if (!termo) return;
+    window.location.href = `search.html?search=${encodeURIComponent(termo)}`;
+  });
+}
