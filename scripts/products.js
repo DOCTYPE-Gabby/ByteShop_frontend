@@ -10,7 +10,7 @@ const paragrafo = document.createElement("p");
 let produtosArr = null;
 const urlParams = new URLSearchParams(location.search);
 const urlId = Number(urlParams.get("id"));
-const base_URL_PRODUCTS = `https://byteshop-backend-kgup.onrender.com/api/admin/products/${urlId}`;
+const base_URL_PRODUCTS = `https://byteshop-backend-kgup.onrender.com/api/products/${urlId}`;
 let produtoEncontrado = null;
 async function pegarDados() {
   try {
