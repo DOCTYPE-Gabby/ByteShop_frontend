@@ -3,7 +3,7 @@ export async function postCart (product) {
   if (userData) {
     const userObj = JSON.parse(userData)
     const userId = Number(userObj.id)
-    const cartUrl = `/cart/${userId}`;
+    const cartUrl = `https://byteshop-backend-kgup.onrender.com/api/cart/${userId}`;
     const res = await fetch (cartUrl, {
     method: "POST",
     headers: {"content-type": "application/json"},

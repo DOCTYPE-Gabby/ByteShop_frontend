@@ -143,3 +143,16 @@ form.addEventListener("submit", async (e) => {
     console.log("Corrige os erros antes de enviar");
   }
 });
+
+
+export function checkAdmin() {
+   const user = localStorage.getItem("User")
+   if (user) {
+    JSON.stringify(user)
+    if (user.isAdmin === true) {
+      return true
+    } else {
+      return false 
+    }
+   }
+}
